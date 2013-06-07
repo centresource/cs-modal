@@ -1,0 +1,32 @@
+#modal-overlay {
+  background: $black;
+  display: none;
+  height: 100%;
+  left: 0px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: -1;
+}
+
+.modal {
+  background-color: $white;
+  border-radius: 5px;
+  display: none;
+  margin: 0 auto;
+  padding: 2em;
+  max-width: 600px;
+  @include box-shadow(0 0 4px rgba(0, 0, 0, .7))
+}
+
+.close-modal {
+  background: url('/assets/close.png') no-repeat 0 0;
+  height: 7px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 7px;
+  @include hide-text;
+}
