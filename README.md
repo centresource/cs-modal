@@ -1,6 +1,7 @@
 #cs-modal
 
-A simple modal library.
+A simple modal library. Project maintainers: [Derek Blank](https://github.com/derekblank) & [Winston Hearn](https://github.com/wnstn)
+
 
 ## Basic Usage
 
