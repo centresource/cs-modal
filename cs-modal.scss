@@ -1,0 +1,71 @@
+// Modal Styles
+
+$desktop: min-width 850px !default;
+
+.modal-active {
+  overflow: hidden;
+  position: relative;
+}
+
+#modal-overlay {
+  background: rgba(0,0,0,0);
+  display: none;
+  height: 100%;
+  left: 0px;
+  overflow: auto;
+  overflow-x: none;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 500;
+  -webkit-overflow-scrolling: touch;
+  @include transition(background-color 0.3s ease-in-out);
+}
+
+.modal-active #modal-overlay {
+  background-color: rgba(0,0,0,0.75);
+}
+
+#modal-wrap {
+  @include media($desktop) {
+    padding-bottom: 3em;
+  }
+}
+
+.modal {
+  background-color: $white;
+  border-radius: 5px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+  display: none;
+  left: 0;
+  min-height: 100%;
+  padding: 2em;
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 600;
+
+  @include media($desktop) {
+    left: 50%;
+    margin: 0 0 3em -400px;
+    max-width: 800px;
+    min-height: auto;
+    top: 3em;
+  }
+
+  .close {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 22px;
+    line-height: 1.0;
+    padding: 8px 13px 13px 13px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &:hover {
+      color: #999;
+    }
+  }
+}

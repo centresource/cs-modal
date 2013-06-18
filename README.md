@@ -1,20 +1,34 @@
-csModal
-=======
+#cs-modal
 
-A simple modal that fires via a javascript event and includes some handy-dandy auto-sizing capabilities. 
+A simple modal library. Project maintainers: [Derek Blank](https://github.com/derekblank) & [Winston Hearn](https://github.com/wnstn)
 
 
 ## Basic Usage
 
-Include csModal.coffee in your project.
+1. Include `cs-modal.coffee` and `cs-modal.scss` in your project.
+2. Construct and initialize a modal instance.
+3. Trigger the jQuery event 'open' on the element to show the modal.
 
-Add an element to your page with the id of "modal" like so:
-
-  ````<div id="modal"></div>````
-  
-Trigger the jquery event 'showModal' on the element to show it.
+## Example
 
 ```coffeescript
-$modal = $('#modal')
-$modal.trigger 'showModal'
+modal = new Modal
+
+$ ->
+  modal.init()
+  $('#modal').trigger 'open'
 ```
+
+## Configuration
+
+- cssTransition: true
+- closeButton: '#close-modal'
+- classes: 'modal'
+- keyboard: true
+- opacity: '0.7'
+
+## Events
+
+- open
+- close
+- modalClosed
