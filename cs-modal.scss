@@ -4,6 +4,7 @@ $desktop: min-width 850px !default;
 
 .modal-active {
   overflow: hidden;
+  position: relative;
 }
 
 #modal-overlay {
@@ -17,6 +18,7 @@ $desktop: min-width 850px !default;
   top: 0px;
   width: 100%;
   z-index: 500;
+  -webkit-overflow-scrolling: touch;
   @include transition(background-color 0.3s ease-in-out);
 }
 
